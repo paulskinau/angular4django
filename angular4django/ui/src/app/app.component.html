@@ -1,9 +1,43 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1 class="display-3">Angular 4 + Django Demo</h1>
-        <p>This is a simple website that calls a django rest API as an example</p>
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-3">Angular 4 + Django Demo</h1>
+    <p>This is a simple website that calls a django rest API as an example</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-block">
+        <h3 class="card-title">Source Terrain</h3>
+
+            <div class="form-group">
+              <textarea rows=10 cols=50 class="form-control"  #terrainInput></textarea>
+            </div>
+         <p>{{ result }}</p>
+             <button (click)="submitClicked(terrainInput.value)" class="btn btn-success">Submit</button>
+
+
       </div>
     </div>
-
-  
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-block">
+        <h3 class="card-title">Help</h3>
+        <p class="card-text">Supply a terrain mapping, e.g.</p>
+<p class="card-text">
+            <code>
+46B E59  EA C1F 45E  63<br/>
+899 FFF 926 7AD C4E FFF<br/>
+E2E 323 6D2 976 83F C96<br/>
+9E9 A8B 9C1 461 F74 D05<br/>
+EDD E94 5F4 D1D D03 DE3<br/>
+ 89 925 CF9 CA0 F18 4D2<br/>
+</code>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
