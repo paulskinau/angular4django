@@ -27,7 +27,6 @@ EDD E94 5F4 D1D D03 DE3
         """Verify the simple supplied test case"""
         client = APIClient()        
         response = client.post('/api/robot/', {'terrain': RobotTestCase.TEST_1}, format='json')
-        import ipdb; ipdb.set_trace()
         self.assertEquals(response.data['result'], RobotTestCase.RESULT_1)
 
     def test_returns_error(self):
